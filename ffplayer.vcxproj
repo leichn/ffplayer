@@ -75,8 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\libs_win\develop\SDL2-2.0.9\include;..\libs_win\develop\ffmpeg-20181212\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\libs_win\develop\SDL2-2.0.9\lib\x64;..\libs_win\develop\ffmpeg-20181212\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>.\libs_win\develop\SDL2-2.0.9\include;.\libs_win\develop\ffmpeg-20181212\include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\libs_win\develop\SDL2-2.0.9\lib\x64;.\libs_win\develop\ffmpeg-20181212\lib;$(LibraryPath)</LibraryPath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\build\$(Configuration)\</IntDir>
@@ -116,7 +116,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\libs_win\develop\SDL2-2.0.9\lib;..\libs_win\develop\SDL2-2.0.9\lib\x64;..\libs_win\develop\ffmpeg-20181212\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\libs_win\develop\SDL2-2.0.9\lib;.\libs_win\develop\SDL2-2.0.9\lib\x64;.\libs_win\develop\ffmpeg-20181212\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>swscale.lib;swresample.lib;postproc.lib;avutil.lib;avformat.lib;avfilter.lib;avdevice.lib;avcodec.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
