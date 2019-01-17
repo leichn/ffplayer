@@ -43,9 +43,6 @@ static int video_decode_frame(AVCodecContext *p_codec_ctx, packet_queue_t *p_pkt
 
         while (1)
         {
-            //if (d->queue->abort_request)
-            //    return -1;
-
             // 3. 从解码器接收frame
             // 3.1 一个视频packet含一个视频frame
             //     解码器缓存一定数量的packet后，才有解码后的frame输出
@@ -87,10 +84,9 @@ static int video_decode_frame(AVCodecContext *p_codec_ctx, packet_queue_t *p_pkt
             return -1;
         }
 
-        // packet_queue中第一个总是flush_pkt。每次seek操作会插入flush_pkt，更新serial，开启新的播放序列
         if (pkt.data == NULL)
         {
-            // 复位解码器内部状态/刷新内部缓冲区。当seek操作或切换流时应调用此函数。
+            // 复位解码器内部状态/刷新内部缓冲区。
             avcodec_flush_buffers(p_codec_ctx);
         }
         else
