@@ -1,5 +1,7 @@
 ﻿#include "demux.h"
 #include "packet.h"
+#include "SDL_events.h"
+#include "SDL_mutex.h"
 
 static int decode_interrupt_cb(void *ctx)
 {

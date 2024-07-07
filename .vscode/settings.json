@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "stdio.h": "c",
+        "log.h": "c",
+        "gen_pic_rgb": "c",
+        "sdl.h": "c",
+        "avcodec.h": "c",
+        "avutil.h": "c"
+    }
+}

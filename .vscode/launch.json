@@ -1,0 +1,36 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {//包含Debug配置
+            "name": "(gdb) 启动",//配置名称
+            "type": "cppdbg",//配置类型,对应cpptools提供的调试功能
+            "request": "launch",//请求配置类型,可以是启动/附加类型[launch/attach]
+            "program": "${workspaceFolder}/study_ffmpeg/7_/${fileBasenameNoExtension}",//待调试程序本地路径
+            "args": [//程序调试时传递给程序的命令行参数,设为空值
+                "build_avdio.h264",
+                "libx264"
+            ],
+            "stopAtEntry": false,//改为true时程序暂停在程序入口位置,即main处打上断点
+            "cwd": "${fileDirname}",//调试程序时的工作目录,这里表示源码目录
+            "environment": [],//环境变量,设为空值
+            "externalConsole": false,//true:cmd窗口; false:Vscode的内置终端输出
+            "MIMode": "gdb",//指定连接的调试器,minGW64中调试程序->gdb
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

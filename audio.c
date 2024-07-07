@@ -1,6 +1,7 @@
 ﻿#include "player.h"
 #include "packet.h"
 #include "frame.h"
+#include "SDL_audio.h"
 
 static void sdl_audio_callback(void *opaque, Uint8 *stream, int len);
 
